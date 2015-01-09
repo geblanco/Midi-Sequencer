@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B35249821A601230004C91E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B35249811A601230004C91E7 /* main.cpp */; };
+		B35249891A601260004C91E7 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35249881A601260004C91E7 /* CoreMIDI.framework */; };
+		B352498B1A60128D004C91E7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B352498A1A60128D004C91E7 /* CoreAudio.framework */; };
+		B352498D1A601295004C91E7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B352498C1A601295004C91E7 /* CoreFoundation.framework */; };
+		B352499B1A601321004C91E7 /* CLOCK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B352498E1A601321004C91E7 /* CLOCK.cpp */; };
+		B352499D1A601321004C91E7 /* InterfaceInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B35249911A601321004C91E7 /* InterfaceInput.cpp */; };
+		B352499E1A601321004C91E7 /* InterfaceOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B35249931A601321004C91E7 /* InterfaceOutput.cpp */; };
+		B352499F1A601321004C91E7 /* Mapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B35249951A601321004C91E7 /* Mapper.cpp */; };
+		B35249A01A601321004C91E7 /* RtMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B35249971A601321004C91E7 /* RtMidi.cpp */; };
+		B35249A11A601321004C91E7 /* Sequencer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B35249991A601321004C91E7 /* Sequencer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +34,21 @@
 /* Begin PBXFileReference section */
 		B352497E1A60122F004C91E7 /* MidiSequencer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MidiSequencer; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35249811A601230004C91E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B35249881A601260004C91E7 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreMIDI.framework; sourceTree = DEVELOPER_DIR; };
+		B352498A1A60128D004C91E7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
+		B352498C1A601295004C91E7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		B352498E1A601321004C91E7 /* CLOCK.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CLOCK.cpp; sourceTree = "<group>"; };
+		B352498F1A601321004C91E7 /* CLOCK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLOCK.h; sourceTree = "<group>"; };
+		B35249911A601321004C91E7 /* InterfaceInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InterfaceInput.cpp; sourceTree = "<group>"; };
+		B35249921A601321004C91E7 /* InterfaceInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceInput.h; sourceTree = "<group>"; };
+		B35249931A601321004C91E7 /* InterfaceOutput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InterfaceOutput.cpp; sourceTree = "<group>"; };
+		B35249941A601321004C91E7 /* InterfaceOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceOutput.h; sourceTree = "<group>"; };
+		B35249951A601321004C91E7 /* Mapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mapper.cpp; sourceTree = "<group>"; };
+		B35249961A601321004C91E7 /* Mapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mapper.h; sourceTree = "<group>"; };
+		B35249971A601321004C91E7 /* RtMidi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RtMidi.cpp; sourceTree = "<group>"; };
+		B35249981A601321004C91E7 /* RtMidi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtMidi.h; sourceTree = "<group>"; };
+		B35249991A601321004C91E7 /* Sequencer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sequencer.cpp; sourceTree = "<group>"; };
+		B352499A1A601321004C91E7 /* Sequencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sequencer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B352498D1A601295004C91E7 /* CoreFoundation.framework in Frameworks */,
+				B352498B1A60128D004C91E7 /* CoreAudio.framework in Frameworks */,
+				B35249891A601260004C91E7 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +68,9 @@
 		B35249751A60122F004C91E7 = {
 			isa = PBXGroup;
 			children = (
+				B352498C1A601295004C91E7 /* CoreFoundation.framework */,
+				B352498A1A60128D004C91E7 /* CoreAudio.framework */,
+				B35249881A601260004C91E7 /* CoreMIDI.framework */,
 				B35249801A60122F004C91E7 /* MidiSequencer */,
 				B352497F1A60122F004C91E7 /* Products */,
 			);
@@ -58,6 +88,18 @@
 			isa = PBXGroup;
 			children = (
 				B35249811A601230004C91E7 /* main.cpp */,
+				B352498E1A601321004C91E7 /* CLOCK.cpp */,
+				B352498F1A601321004C91E7 /* CLOCK.h */,
+				B35249911A601321004C91E7 /* InterfaceInput.cpp */,
+				B35249921A601321004C91E7 /* InterfaceInput.h */,
+				B35249931A601321004C91E7 /* InterfaceOutput.cpp */,
+				B35249941A601321004C91E7 /* InterfaceOutput.h */,
+				B35249951A601321004C91E7 /* Mapper.cpp */,
+				B35249961A601321004C91E7 /* Mapper.h */,
+				B35249971A601321004C91E7 /* RtMidi.cpp */,
+				B35249981A601321004C91E7 /* RtMidi.h */,
+				B35249991A601321004C91E7 /* Sequencer.cpp */,
+				B352499A1A601321004C91E7 /* Sequencer.h */,
 			);
 			path = MidiSequencer;
 			sourceTree = "<group>";
@@ -118,6 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35249A01A601321004C91E7 /* RtMidi.cpp in Sources */,
+				B35249A11A601321004C91E7 /* Sequencer.cpp in Sources */,
+				B352499D1A601321004C91E7 /* InterfaceInput.cpp in Sources */,
+				B352499B1A601321004C91E7 /* CLOCK.cpp in Sources */,
+				B352499F1A601321004C91E7 /* Mapper.cpp in Sources */,
+				B352499E1A601321004C91E7 /* InterfaceOutput.cpp in Sources */,
 				B35249821A601230004C91E7 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,14 +250,24 @@
 		B35249861A601230004C91E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					__MACOSX_CORE__,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 			};
 			name = Debug;
 		};
 		B35249871A601230004C91E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = __MACOSX_CORE__;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 			};
 			name = Release;
 		};
