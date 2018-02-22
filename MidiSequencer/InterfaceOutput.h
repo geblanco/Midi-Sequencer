@@ -10,6 +10,7 @@
 #ifndef ____InterfaceOutput__
 #define ____InterfaceOutput__
 
+#include <cstring>
 #include "RtMidi.h"
 #include "Mapper.h"
 #include "Sequencer.h"

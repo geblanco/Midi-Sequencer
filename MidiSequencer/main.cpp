@@ -7,6 +7,7 @@
 //
 #include <iostream>
 #include <cstdlib>
+#include <cstring>
 #include <signal.h>
 #include <fstream>
 #include <unistd.h>

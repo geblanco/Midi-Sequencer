@@ -11,6 +11,7 @@
 #define ____Mapper__
 
 #include <stdio.h>
+#include <cstring>
 
 //Temporary: Better catch it from config file
 const unsigned int TRACKS[] = {48, 49, 50, 51, 44, 45, 46, 47, 40, 41, 42, 43 };
