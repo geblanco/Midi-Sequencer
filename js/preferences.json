@@ -1,0 +1,14 @@
+{
+  "clockMidiPort": 2,
+  "controllerInputPort": 1,
+  "controllerOutputPort": 1,
+  "sequencerOutputPort": "Sequencer",
+  "sequencerOutputChannel": 15,
+  "layer": 0,
+  "controllerMidiChannel": 15,
+  "nSteps": 16,
+  "nTracks": 6,
+  "clockResolution": 24,
+  "sequencerConfigPath": "sequencer.json",
+  "controllerConfigPath": "k2_map.json"
+}

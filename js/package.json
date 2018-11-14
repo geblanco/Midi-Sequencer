@@ -1,0 +1,21 @@
+{
+  "name": "MIDI-Sequencer",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Generic MIDI Sequencer with controllers support",
+  "author": "Guillermo Blanco",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m0n0l0c0/Mutant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/m0n0l0c0/Mutant/issues",
+    "email": "guillermoechegoyenblanco@gmail.com"
+  },
+  "main": "main.js",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "midi": "^0.9.5",
+    "upath": "^1.1.0"
+  }
+}

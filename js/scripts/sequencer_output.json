@@ -1,0 +1,88 @@
+{
+  "tracks": [
+    {
+      "select": 1,
+      "mute": 2,
+      "solo": 3,
+      "volume": 4,
+      "filter": 5,
+      "pan": 6,
+      "a": 7,
+      "d": 8,
+      "s": 9,
+      "r": 10,
+      "send_a": 11,
+      "send_b": 12
+    },
+    {
+      "select": 14,
+      "mute": 15,
+      "solo": 16,
+      "volume": 17,
+      "filter": 18,
+      "pan": 19,
+      "a": 20,
+      "d": 21,
+      "s": 22,
+      "r": 23,
+      "send_a": 24,
+      "send_b": 25
+    },
+    {
+      "select": 27,
+      "mute": 28,
+      "solo": 29,
+      "volume": 30,
+      "filter": 31,
+      "pan": 32,
+      "a": 33,
+      "d": 34,
+      "s": 35,
+      "r": 36,
+      "send_a": 37,
+      "send_b": 38
+    },
+    {
+      "select": 40,
+      "mute": 41,
+      "solo": 42,
+      "volume": 43,
+      "filter": 44,
+      "pan": 45,
+      "a": 46,
+      "d": 47,
+      "s": 48,
+      "r": 49,
+      "send_a": 50,
+      "send_b": 51
+    },
+    {
+      "select": 53,
+      "mute": 54,
+      "solo": 55,
+      "volume": 56,
+      "filter": 57,
+      "pan": 58,
+      "a": 59,
+      "d": 60,
+      "s": 61,
+      "r": 62,
+      "send_a": 63,
+      "send_b": 64
+    },
+    {
+      "select": 66,
+      "mute": 67,
+      "solo": 68,
+      "volume": 69,
+      "filter": 70,
+      "pan": 71,
+      "a": 72,
+      "d": 73,
+      "s": 74,
+      "r": 75,
+      "send_a": 76,
+      "send_b": 77
+    }
+  ]
+}

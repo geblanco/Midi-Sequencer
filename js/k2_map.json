@@ -1,0 +1,141 @@
+{
+  "matrix": [ 36, 37, 38, 39, 32, 33, 34, 35, 28, 29, 30, 31, 24, 25, 26, 27 ],
+  "ncols": 4,
+  "nrows": 4,
+  "encoderIncrement": 2,
+  "multitrack": [
+    {
+      "control": "filter",
+      "encoder": true,
+      "value": 0
+    },
+    {
+      "control": "s",
+      "encoder": true,
+      "value": 1
+    },
+    {
+      "control": "send_a",
+      "encoder": true,
+      "value": 2
+    },
+    {
+      "control": "send_b",
+      "encoder": true,
+      "value": 3
+    }
+  ],
+  "tracks": [
+    {
+      "ctrl_0": {
+        "value": 48,
+        "control": "select"
+      },
+      "ctrl_1": {
+        "value": 49,
+        "control": "mute"
+      },
+      "knob_0": {
+        "value": 4,
+        "control": "volume"
+      },
+      "knob_1": {
+        "value": 5,
+        "control": "r"
+      }
+    },
+    {
+      "ctrl_0": {
+        "value": 44,
+        "control": "select"
+      },
+      "ctrl_1": {
+        "value": 45,
+        "control": "mute"
+      },
+      "knob_0": {
+        "value": 8,
+        "control": "volume"
+      },
+      "knob_1": {
+        "value": 9,
+        "control": "r"
+      }
+    },
+    {
+      "ctrl_0": {
+        "value": 40,
+        "control": "select"
+      },
+      "ctrl_1": {
+        "value": 41,
+        "control": "mute"
+      },
+      "knob_0": {
+        "value": 12,
+        "control": "volume"
+      },
+      "knob_1": {
+        "value": 13,
+        "control": "r"
+      }
+    },
+    {
+      "ctrl_0": {
+        "value": 50,
+        "control": "select"
+      },
+      "ctrl_1": {
+        "value": 51,
+        "control": "mute"
+      },
+      "knob_0": {
+        "value": 6,
+        "control": "volume"
+      },
+      "knob_1": {
+        "value": 7,
+        "control": "r"
+      }
+    },
+    {
+      "ctrl_0": {
+        "value": 46,
+        "control": "select"
+      },
+      "ctrl_1": {
+        "value": 47,
+        "control": "mute"
+      },
+      "knob_0": {
+        "value": 10,
+        "control": "volume"
+      },
+      "knob_1": {
+        "value": 11,
+        "control": "r"
+      }
+    },
+    {
+      "ctrl_0": {
+        "value": 42,
+        "control": "select"
+      },
+      "ctrl_1": {
+        "value": 43,
+        "control": "mute"
+      },
+      "knob_0": {
+        "value": 14,
+        "control": "volume"
+      },
+      "knob_1": {
+        "value": 15,
+        "control": "r"
+      }
+    }
+  ],
+  "colors": {
+    "mute": 36
+  }
+}
