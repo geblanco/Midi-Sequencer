@@ -8,7 +8,7 @@
   "controllerMidiChannel": 15,
   "nSteps": 16,
   "nTracks": 6,
-  "clockResolution": 24,
+  "clockResolution": 6,
   "sequencerConfigPath": "sequencer.json",
   "controllerConfigPath": "k2_map.json"
 }

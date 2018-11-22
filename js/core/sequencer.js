@@ -194,7 +194,6 @@ class Sequencer {
       soundTracks = this.tracks
     }
     let litTracks = this._trackIter(soundTracks)
-    console.log('Current step', this.currStep)
     return litTracks
   }
   stepOut(track, step){

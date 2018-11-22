@@ -73,7 +73,6 @@ class Clock {
     this.clockData.count++
     if (0 === (this.clockData.count % this.clockData.resolution)) {
       this.clockData.beatcount = (this.clockData.beatcount + 1) % this.clockData.steps
-      console.log('clock run', this.clockData.beatcount)
       this.clockData.count = 0
       let blinkTracks = cloneDeep(this.sequencer.getActivatedTracks(this.clockData.beatcount))
       blinkTracks[this.sequencer.getCurrTrack()] = 127
