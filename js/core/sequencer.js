@@ -9,6 +9,7 @@ class Track {
     this.id = id
     this._mute = false
     this._solo = false
+    this.midiOut = null
     this.controlPointers = {}
     this.trackControls = {}
     this.continuousControls = {}
@@ -24,6 +25,12 @@ class Track {
       this.continuousControls[control] = 100
       this.controlPointers[control] = 'continuousControls'
     }
+  }
+  getMidiOutput(){
+    return this.midiOut
+  }
+  setMidiOutput(midiOutput){
+    this.midiOut = midiOutput
   }
   setStep(s, vel=100){ this.steps[s] = vel }
   getStep(s){ return (this._solo || !this._mute) ? this.steps[s] : 0 }
@@ -110,6 +117,8 @@ class Sequencer {
     this.settings = require(settingsFile)
     this.midiOut = new output()
     this.midiOut.openVirtualPort(this.midiPort)
+    this.modes = ['normal', 'record', 'perform']
+    this.mode = this.modes[0]
     this.currStep = 0
     this.prevStep = -1
     this.currTrack = 0
@@ -117,7 +126,13 @@ class Sequencer {
     this.vel = 100
     this.tracks = []
     for (let trackId = 0; trackId < this.numTracks; trackId++) {
-      this.tracks.push(new Track(this.settings.trackControls, this.settings.continuousControls, this.numSteps, trackId))
+      let track = new Track(this.settings.trackControls, this.settings.continuousControls, this.numSteps, trackId)
+      if (this.settings.individualTrackOutput) {
+        midiOutput = new output()
+        midiOutput.openVirtualPort(`Sequencer Track ${trackId}`)
+        track.setMidiOutput(midiOutput)
+      }
+      this.tracks.push(track)
     }
     console.log(`Sequencer registered at ${this.midiPort}:${this.midiChannel}`)
   }
@@ -133,8 +148,12 @@ class Sequencer {
     console.log('Sequencer continuousControl', track, control, this.tracks[track].get(control))
     this.tracks[track].set(control, value)
     let cc = this.settings.tracks[track][control]
+    if (this.settings.individualTrackOutput && this.settings.individualContinuousControlsOutput) {
+      cc = this.settings.tracks[0][control]
+    }
     let message = [getKnob(this.midiChannel), cc, this.tracks[track].get(control)]
-    this.midiOut.sendMessage(message)
+    let out = this.tracks[track].getMidiOutput() || this.midiOut
+    out.sendMessage(message)
   }
   getCurrTrack(){ return this.currTrack }
   getPrevTrack(){ return this.prevTrack }
@@ -147,6 +166,12 @@ class Sequencer {
   getNumTracks(){ return this.numTracks }
   getNumSteps(){ return this.numSteps }
   getPortName(){ return this.midiPort }
+  getMode(){ return this.mode }
+  toggleMode(){
+    let modeIdx = this.modes.indexOf(this.mode)
+    modeIdx = (modeIdx + 1) % this.modes.length
+    this.mode = this.modes[modeIdx]
+  }
   getActivatedTracks(step){
     let active = new Array(this.nTracks).fill(0)
     let trackList = this.tracks.filter(track => track.isSoloed())
@@ -166,6 +191,23 @@ class Sequencer {
     this.prevTrack = this.currTrack
     this.currTrack = track
     console.log('Sequencer selectTrack', track)
+    if (this.mode === 'perform') {
+      let solos = this._getSoloIndices()
+      if (solos.length === 0 || solos.indexOf(track) !== -1) {
+        this.stepOut(track, 100)
+      }
+    } else if (this.mode === 'record') {
+      this.setStep(this.currStep)
+    }
+  }
+  _getSoloIndices(){
+    let solos = []
+    for (let i = 0; i < this.tracks.length; i++) {
+      if (this.tracks[i].isSoloed()) {
+        solos.push(i)
+      }
+    }
+    return solos
   }
   _trackIter(trackSet){
     let toLit = []
@@ -198,7 +240,11 @@ class Sequencer {
   }
   stepOut(track, step){
     let message = [ getNoteOn(this.midiChannel), this.settings.baseValue + track, step ]
-    this.midiOut.sendMessage(message)
+    if (this.settings.individualTrackOutput && this.settings.individualNoteControlsOutput) {
+      message[1] = this.settings.baseValue
+    }
+    let out = this.tracks[track].getMidiOutput() || this.midiOut
+    out.sendMessage(message)
   }
   start(){
     this.prevStep = this.currStep

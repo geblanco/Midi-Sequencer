@@ -3,6 +3,9 @@
   "nSteps": 16,
   "trackControls": ["select", "mute", "solo"],
   "continuousControls": ["volume", "filter", "pan", "a", "d", "s", "r", "send_a", "send_b"],
+  "individualTrackOutput": false,
+  "individualContinuousControlsOutput": true,
+  "individualNoteControlsOutput": true,
   "baseValue": 36,
   "tracks": [
     {
