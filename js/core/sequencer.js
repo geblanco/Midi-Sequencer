@@ -128,8 +128,8 @@ class Sequencer {
     for (let trackId = 0; trackId < this.numTracks; trackId++) {
       let track = new Track(this.settings.trackControls, this.settings.continuousControls, this.numSteps, trackId)
       if (this.settings.individualTrackOutput) {
-        midiOutput = new output()
-        midiOutput.openVirtualPort(`Sequencer Track ${trackId}`)
+        let midiOutput = new output()
+        midiOutput.openVirtualPort(`Sequencer Track ${trackId +1}`)
         track.setMidiOutput(midiOutput)
       }
       this.tracks.push(track)
