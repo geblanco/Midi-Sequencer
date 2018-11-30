@@ -13,7 +13,8 @@ app.on('ready', function() {
     resizable: true,
     darkTheme: true,
     show: true,
-    title: 'MIDI Sequencer'
+    title: 'MIDI Sequencer',
+    frame: false
   })
 
   mainWindow.loadURL(`file://${join(__dirname, 'html', 'index.html')}`)

@@ -4,31 +4,92 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link rel="stylesheet" type="text/css" href="styles/pure-min.css">
-  <link rel="stylesheet" type="text/css" href="styles/index.css">
+  <!-- <link rel="stylesheet" type="text/css" href="styles/index.css"> -->
   <link rel="stylesheet" type="text/css" href="styles/grids-responsive-min.css">
   <link rel="stylesheet" type="text/css" href="styles/font-awesome.css">
-  <script type="text/javascript" src="scripts/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="scripts/jquery.min.js"></script> -->
   <script type="text/javascript" src="scripts/jquery-knobs.min.js"></script>
   <title>MIDI Sequencer</title>
+  <style type="text/css">
+    div.demo{ text-align: center;}
+    div.demo > p{font-size: 20px}
+    body{
+      padding: 0;
+      margin: 0px 5px;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      font-weight: 600;
+      color: #808090;
+      text-rendering: optimizelegibility;
+    }
+    div.bordered{
+      margin-top: 2px;
+      border: 2px solid #808080;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <div class="content-wrapper">
-    <div class="content">
+    <div class="demo">
       <div class="pure-g">
-        <div class="pure-u-1-2">
-          <div class="track-box">
-            <input type="text" class="dial" data-fgColor="#222222" data-rotation="clockwise" data-angleOffset="-135" data-angleArc="270" data-width="100">
-            <input type="text" class="dial" data-fgColor="#222222" data-rotation="clockwise" data-angleOffset="-135" data-angleArc="270" data-width="100">
-          </div>
-        </div>
-        <div class="pure-u-1-2">
-            <div class="track-box">
-              <input type="text" class="dial" data-fgColor="#222222" data-rotation="clockwise" data-angleOffset="-135" data-angleArc="270" data-width="100">
-              <input type="text" class="dial" data-fgColor="#222222" data-rotation="clockwise" data-angleOffset="-135" data-angleArc="270" data-width="100">
+        <!-- <div class="pure-u-11-12"> -->
+          <div class="pure-g bordered">
+            <div class="pure-u-1">
+              <div class="pure-u-1-8">
+                <p>Volume</p>
+              </div>
+              <div class="pure-u-1-8">
+                <p>Attack</p>
+              </div>
+              <div class="pure-u-1-8">
+                <p>Decay</p>
+              </div>
+              <div class="pure-u-1-8">
+                <p>Sustain</p>
+              </div>
+              <div class="pure-u-1-8">
+                <p>Release</p>
+              </div>
+              <div class="pure-u-1-8">
+                <p>Send A</p>
+              </div>
+              <div class="pure-u-1-8">
+                <p>Send B</p>
+              </div>
+            </div>
+            <div class="pure-u-1 bordered">
+              <div class="pure-u-1-8">
+                <input type="text" class="dial" data-displayInput=false  data-fgColor="#222222" data-rotation="clockwise" data-angleOffset="-135" data-angleArc="270" data-width="60"  data-height="60">
+              </div>
+              <div class="pure-u-1-8">
+                <input type="text" class="dial" data-displayInput=false  data-fgColor="#222222" data-rotation="clockwise" data-angleOffset="-135" data-angleArc="270" data-width="60"  data-height="60">
+              </div>
+              <div class="pure-u-1-8">
+                <input type="text" class="dial" data-displayInput=false  data-fgColor="#222222" data-rotation="clockwise" data-angleOffset="-135" data-angleArc="270" data-width="60"  data-height="60">
+              </div>
+              <div class="pure-u-1-8">
+                <input type="text" class="dial" data-displayInput=false  data-fgColor="#222222" data-rotation="clockwise" data-angleOffset="-135" data-angleArc="270" data-width="60"  data-height="60">
+              </div>
+              <div class="pure-u-1-8">
+                <input type="text" class="dial" data-displayInput=false  data-fgColor="#222222" data-rotation="clockwise" data-angleOffset="-135" data-angleArc="270" data-width="60"  data-height="60">
+              </div>
+              <div class="pure-u-1-8">
+                <input type="text" class="dial" data-displayInput=false  data-fgColor="#222222" data-rotation="clockwise" data-angleOffset="-135" data-angleArc="270" data-width="60"  data-height="60">
+              </div>
+              <div class="pure-u-1-8">
+                <input type="text" class="dial" data-displayInput=false  data-fgColor="#222222" data-rotation="clockwise" data-angleOffset="-135" data-angleArc="270" data-width="60"  data-height="60">
+              </div>
             </div>
           </div>
+        <!-- </div> -->
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.dial').knob()
+    })
+  </script>
 </body>
 </html>
